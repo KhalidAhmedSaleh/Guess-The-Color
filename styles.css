@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400");
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Grey colors */
+  --clr-grey-100: #afb8c6;
+  --clr-grey-200: #9ea6b2;
+  --clr-grey-300: #8c939e;
+  --clr-grey-400: #7a818b;
+  --clr-grey-500: #696e77;
+  --clr-grey-600: #585c63;
+  --clr-grey-700: #464a4f;
+  --clr-grey-800: #35373b;
+  --clr-grey-900: #232528;
+
+  /* Primary colors */
+  --clr-primary-100: #91b2c5;
+  --clr-primary-200: #83a0b1;
+  --clr-primary-300: #748e9e;
+  --clr-primary-400: #667d8a;
+  --clr-primary-500: #576b76;
+  --clr-primary-600: #495963;
+  --clr-primary-700: #3a474f;
+  --clr-primary-800: #2c353b;
+  --clr-primary-900: #1d2427;
+
+  --clr-white: #ffffff;
+  --clr-black: #000000;
+
+  --raduis: 0.5rem;
+  --letter-space: 0.25rem;
+}
+
+html {
+  font-size: 100%;
+} /*16px*/
+
+body {
+  background: #edf2f4;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  line-height: 1.75;
+  color: #000000;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 3rem 0 1.38rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.052rem;
+}
+
+h2 {
+  font-size: 2.441rem;
+}
+
+h3 {
+  font-size: 1.953rem;
+}
+
+h4 {
+  font-size: 1.563rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+small,
+.text_small {
+  font-size: 0.8rem;
+}
+
+.underline {
+  height: 0.3rem;
+  margin: 0 auto;
+  width: 10rem;
+  background-color: var(--clr-primary-100);
+}
+
+.hidden {
+  display: none;
+}
+
+/* Animation */
+
+@keyframes color-changing {
+  0% {
+    color: var(--clr-grey-300);
+  }
+  50% {
+    color: var(--clr-grey-800);
+  }
+  75% {
+    color: var(--clr-primary-500);
+  }
+  100% {
+    color: var(--clr-primary-100);
+  }
+}
+
+@keyframes background-changing {
+  0% {
+    background-color: var(--clr-primary-200);
+  }
+  50% {
+    background-color: var(--clr-primary-100);
+  }
+
+  75% {
+    color: var(--clr-grey-100);
+  }
+  100% {
+    color: var(--clr-grey-200);
+  }
+}
+
+/* title */
+
+.title-contaier {
+  margin-bottom: 0;
+  display: grid;
+  place-items: center;
+}
+
+.title {
+  text-transform: uppercase;
+  letter-spacing: var(--letter-space);
+  color: var(--clr-grey-300);
+}
+
+/* color */
+
+.color-container {
+  display: grid;
+  place-items: center;
+  margin-top: 3rem;
+  /* animation: background-changing 5s linear infinite; */
+  background-color: var(--clr-primary-400);
+
+  height: 10rem;
+}
+
+.color {
+  animation: color-changing 3s linear infinite;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+/* Line */
+
+.line {
+  background: linear-gradient(
+    to left,
+    var(--clr-primary-100),
+    var(--clr-primary-900)
+  );
+  height: 1rem;
+}
+
+/* Game system */
+
+.game-system {
+  background-color: var(--clr-white);
+}
+
+.system-container {
+  display: flex;
+  width: 1920px;
+  justify-content: space-around;
+}
+
+.system-container p {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  letter-spacing: var(--letter-space);
+  color: var(--clr-grey-600);
+}
+
+.play-again {
+  background-color: transparent;
+  border-color: transparent;
+  font-size: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.play-again p {
+  color: var(--clr-grey-600);
+}
+
+/* Line2 */
+.line2 {
+  background: linear-gradient(
+    to left,
+    var(--clr-primary-900),
+    var(--clr-primary-100)
+  );
+  height: 1rem;
+}
+
+/* options */
+
+.options-container {
+  display: flex;
+  width: 35rem;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  margin-top: 5rem;
+  justify-content: space-around;
+}
+
+.options-1 {
+  margin-bottom: 1rem;
+  background-color: rgb(28, 120, 222);
+  width: 10rem;
+  height: 10rem;
+  cursor: pointer;
+  border-radius: var(--raduis);
+}
+.options-2 {
+  background-color: rgb(0, 128, 0);
+  width: 10rem;
+  height: 10rem;
+  cursor: pointer;
+  border-radius: var(--raduis);
+}
+.options-3 {
+  background-color: rgb(28, 2, 220);
+  width: 10rem;
+  height: 10rem;
+  cursor: pointer;
+  border-radius: var(--raduis);
+}
+.options-4 {
+  background-color: rgb(1, 11, 1);
+  width: 10rem;
+  height: 10rem;
+  cursor: pointer;
+  border-radius: var(--raduis);
+}
+.options-5 {
+  background-color: rgb(256, 256, 256);
+  width: 10rem;
+  height: 10rem;
+  cursor: pointer;
+  border-radius: var(--raduis);
+}
+.options-6 {
+  background-color: rgb(100, 100, 100);
+  width: 10rem;
+  height: 10rem;
+  cursor: pointer;
+  border-radius: var(--raduis);
+}
